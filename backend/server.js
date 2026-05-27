@@ -16,7 +16,7 @@ app.use(express.json());
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
-  // Add your deployed frontend URL here when deployed
+  'https://team-task-manager-at9tmcppg-muhammad-bilal-s-projects5.vercel.app/'
 ];
 
 app.use(cors({
