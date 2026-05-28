@@ -16,8 +16,8 @@ app.use(express.json());
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
-  'https://team-task-manager-at9tmcppg-muhammad-bilal-s-projects5.vercel.app/',
-  'https://team-task-manager-jj1vlssh4-muhammad-bilal-s-projects5.vercel.app/'
+  'https://team-task-manager-1jfada0u1-muhammad-bilal-s-project55.vercel.app',  // ADD THIS!
+  'https://team-task-manager.vercel.app',
 ];
 
 app.use(cors({
