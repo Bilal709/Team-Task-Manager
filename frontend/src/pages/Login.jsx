@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useDarkMode } from '../context/DarkModeContext';
-import api from '../api/axios';
+import axios from 'axios';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -15,7 +15,11 @@ function Login() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await api.post('/auth/login', { email, password });
+      // HARDCODED URL - using axios directly
+      const response = await axios.post('https://task-manager-api-8ai2.onrender.com/auth/login', 
+        { email, password },
+        { withCredentials: true }
+      );
       localStorage.setItem('user', JSON.stringify(response.data.user));
       navigate('/dashboard');
     } catch (err) {
@@ -45,7 +49,6 @@ function Login() {
       </button>
 
       <div className="card w-full max-w-md p-8 card-hover">
-        {/* Logo/Brand */}
         <div className="text-center mb-8">
           <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
             <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
