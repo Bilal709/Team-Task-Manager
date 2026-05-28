@@ -17,7 +17,7 @@ const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
   /^https:\/\/team-task-manager.*\.vercel\.app$/,  // This allows ANY Vercel preview URL
-  'https://team-task-manager.vercel.app',
+'https://task-manager-gylh6uzui-muhammad-bilal-s-projects5.vercel.app'
 ];
 
 app.use(cors({
